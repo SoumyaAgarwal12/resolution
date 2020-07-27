@@ -1,0 +1,368 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* Head Menu */
+header{
+    width: 100%;
+    background-color: black;
+    /* height: 50px; */
+    display: flex;
+
+}
+logo{
+    /* background-color: red; */
+    color: white;
+    padding: 18px;
+    /* margin-left: 20px; */
+    font-size : 20px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+   
+}
+nav{
+    /* background-color: blue; */
+    color: white;
+    padding: 18px;
+    /* margin-left:56%; */
+    width: 50%;
+    padding-left: 22%;
+}
+nav input{
+    margin-right: 8px;
+    /* margin-left: 40px; */
+}
+nav #search{
+    background-color: black;
+    color: white;
+    border: black;
+}
+
+/* For Adding Resolutions */
+main{
+    width: 100%;
+    /* background-color: rgb(139, 0, 86); */
+    display: flex;
+    justify-content:center; 
+}
+main #main-div{
+   padding-top: 40px;
+   /* padding-left: 250px; */      
+   /* background-color:rgb(255, 0, 234); */
+   /* border: 2px solid green; */
+   width: 70%;
+}
+#add-resolution-heading{
+   /* background-color: darkorange; */
+   padding:15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#add-resolution{
+/* background-color: deeppink; */
+padding:10px;
+display: flex;
+ align-items: center;    /*for doing add button in center */
+ /* padding-bottom: 40px; */
+}
+#main-div #add-resolution textarea{
+    width: 90%;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 10px;
+}
+#add-res-btn{
+    width: 70px;
+    height: 40px;
+    background-color: mediumblue;
+    color: white;
+    border-radius: 30px;
+    border:2px solid black
+}
+/* WARNING MESSAGE */
+#message{
+    padding-bottom: 40px;
+    padding-left: 20px;
+    color: red;
+}
+/* Display Resolution */
+#display-div{
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    /* background-color: teal; */
+    /* display: flex;
+    justify-content:center;  */
+}
+#display-div #display-div1{
+    /* padding-top: 15px;
+    padding-left: 14%; */
+/* background-color: mediumorchid; */
+ }
+ #display-res-heading{
+    /* background-color: darkorange; */
+    padding:15px;
+    /* padding-top: 15px; */
+    padding-left: 15%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ /* Showres */
+ #res{
+    /* background-color: crimson; */
+    width: 80%;
+    margin-left: 0px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* margin: 10px; */
+    /* justify-content: center;
+    align-items: center; */
+    /* height: 500px; */
+    /* position: relative;
+    left:50px;
+    right: 50px; */
+    
+     /* margin: 10px 50px 50px 0px; */
+    /* display:flex; */
+   /* justify-content: center; */
+   /* align-items: center; */
+}
+ #res1{
+     /* background-color: mediumblue; */
+     width: 100%;
+     /* margin-left: 50px; */
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    
+ }
+
+ #displayRes{
+     /* min-width: 150px; */
+     /* height: 100px; */
+      width:100%;
+    /* height: 100%; */
+    background-color: #f5416e;
+     border:2px solid black;
+     padding: 10px;
+     margin: 10px;
+     color: white;
+      /* display: flex; */
+      display: grid;
+      grid-template-columns: 70px auto 20px;
+    /* flex-direction: column;
+     flex-wrap: wrap; */
+     /* display: grid;
+     grid-auto-rows: 50px; */
+     /* display: flex; */
+     
+ }
+ 
+ #displayRes h3{
+     /* margin: 5px 1px; */
+     /* margin-right: 20px; */
+ }
+ #displayRes p{
+     font-size: 17px;
+     /* margin-left: 10px; */
+     /* line-height: 25px; */
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    
+ }
+ #displayRes button{
+     /* border: 2px solid rgb(151, 147, 147); */
+     /* margin-left: 45px; */
+     height: 15px;
+     margin-right: 6px;
+     margin-left: 3px;
+     background-color: #f5416e;
+    /* background-color: midnightblue; */
+  margin-top: 1%;
+     /* border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px; */
+     /* border-radius: 10px; */
+     /* width: 10%; */
+     /* padding: 6px; */
+     /* margin-top: 10px; */
+    border: none;
+    
+ }
+ /* #show-res{
+     width:50px;
+     height: 50px;
+     border:2px solid black;
+     /* margin: 10px;
+     padding: 10px; */
+ /* } */
+ #unfound{
+    width:100%;
+    /* height: 100%; */
+    /* background-color: #f5416e; */
+     /* border:2px solid black; */
+     padding: 10px;
+     margin: 10px;
+     color: crimson
+}
+/* Media query */
+ @media(max-width:850px) {
+   /* logo {
+       color:greenyellow;
+    } */
+    nav{
+        padding-left: 18%;
+    }
+}
+@media(max-width:750px) {
+    /* logo {
+        color:rgb(255, 47, 47);
+     } */
+    nav{
+        padding-left: 15%;
+    }
+    nav input{
+        width:60%;
+    }
+    #res{
+        width:95%;
+        display: flex;
+        
+        justify-content: center;
+    }
+}
+@media(max-width:610px){
+    #add-resolution-heading{
+font-size:14px;
+    }
+    logo{
+        width: 100%;
+    }
+    #res{
+        width:95%;
+        display: flex;
+        
+        justify-content: center;
+    }
+    #displayRes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    #displayRes p{
+      grid-area: 2/1/3/3;
+       margin-top:6px;
+       
+    }
+    #displayRes button{
+     grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media(max-width:560px){
+    logo{
+        width: 100%;
+    }
+    #add-resolution-heading{
+        font-size:13px;
+    }
+    #res{
+        width:100%;
+        display: flex;
+        
+        justify-content: center;
+    }
+    #displayRes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    #displayRes p{
+      grid-area: 2/1/3/3;
+       margin-top:6px;
+       
+    }
+    #displayRes button{
+     grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: flex-end;
+
+}
+@media(max-width:500px){
+    logo{
+        width: 100%;
+    }
+    main #main-div{
+       
+        width: 85%;
+     }
+     #res{
+        width:100%;
+        display: flex;
+        
+        justify-content: center;
+    }
+    #displayRes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    #displayRes p{
+      grid-area: 2/1/3/3;
+       margin-top:6px;
+       
+    }
+    #displayRes button{
+     grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: flex-end;
+}
+@media(max-width:440px){
+    main #main-div{
+        width: 95%;
+     }
+     #add-resolution-heading{
+        font-size:8px;
+    }
+    #add-resolution{
+        display: flex;
+        flex-direction: column;
+    }
+    #add-resolution button{
+        margin-top:15px;
+    }
+    #display-res-heading{
+        font-size:11px;
+        margin-left: -15px;
+        
+    }
+    logo{
+        /* margin: auto; */
+        width: 100%;
+        font-size: 15px;
+    }
+    /* logo h3{
+        text-align: center;
+    } */
+    #res{
+        width:100%;
+        display: flex;
+        
+        justify-content: center;
+    }
+    #displayRes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    #displayRes p{
+      grid-area: 2/1/3/3;
+       margin-top:6px;
+       
+    }
+    #displayRes button{
+     grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: flex-end;
+}

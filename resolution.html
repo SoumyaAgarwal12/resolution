@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolution</title>
+    <!-- <link rel="stylesheet" href="resolution.css"> -->
+    <link rel="stylesheet" href="resolution1.css">
+</head>
+
+<body>
+    <!-- Head Menu -->
+    <header>
+        <logo>
+            <h3>Digital Resolution's Diary</h3>
+        </logo>
+        <!-- <nav>
+            <input type="search" id="searchTxt">
+            <button type="submit" id="search">Search</button>
+
+        </nav> -->
+    </header>
+    <!-- For Adding Resolutions -->
+    <main>
+        <div id="main-div">
+            <div id="add-resolution-heading">
+                <h1>Add Today's Resolution</h1>
+            </div>
+            <div id="add-resolution">
+                <textarea rows="2" cols="25" id="textareaId"></textarea>
+                <button id="add-res-btn" onclick="validation()">ADD</button>
+            </div>
+            <div id="message"></div>
+        </div>
+    </main>
+    <!-- Display Resolution -->
+    <div id="display-div">
+        <div id="display-div1">
+            <div id="display-res-heading">
+                <h2>Your Resolutions are :-</h2>
+            </div>
+            
+               <div id="res"></div>
+            
+        </div>
+    </div>
+
+    <script src="resolution.js"></script>
+</body>
+
+</html>
