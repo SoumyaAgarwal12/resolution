@@ -1,5 +1,4 @@
-
-showRes();  //after loading of page Firstly show all my notes
+showRes();  //after loading page, Firstly show all my notes
 // VALIDATION
 function validation() {
     if (textareaId.value.length > 1)
@@ -8,7 +7,7 @@ function validation() {
         showAlert();
 }
 // WARNING FOR BLANK INPUT
-function showAlert(){
+function showAlert() {
     let message = document.getElementById("message");
 
     message.innerHTML = `
@@ -21,7 +20,7 @@ function showAlert(){
 }
 // ADD IN LOCALSTORAGE
 function addRes() {
-    var addTxt = document.getElementById("textareaId"); //don't write .value here otherwise at last there will be problm im blanking the textarea's value after set in localStorage
+    var addTxt = document.getElementById("textareaId");
     // alert(addTxt)
     var getRes = localStorage.getItem("res");
     if (getRes == null) {
@@ -54,9 +53,7 @@ function showRes() {
     function myRes(content, index) {
         html += `
         <div id="res1">
-      
-        <div id="displayRes">
-        
+        <div class="displayRes">
            <h3 style="color:black";>Note ${index + 1} : </h3>
            <p id="para">${content}</p>
           <button id="${index}" onclick="deleteRes(this.id)">X</button>
@@ -95,44 +92,27 @@ function deleteRes(index) {
 }
 
 // Search
-// var srch=document.getElementById("searchTxt");
-// srch.addEventListener("input", function(){
-
-//     var inputValue=srch.value;
-//     // console.log(inputValue);
-
-//     var resDisplay=document.getElementById("displayRes");
-//     // console.log(resDisplay)
-
-//     Array.from(resDisplay).forEach(function(element){
-//         var z=document.getElementById("para").innerHTML;
-//         // console.log(z);
-
-//     if(z.includes(inputValue)){
-//         resDisplay.style.display="block";
-//     }
-//     else{
-//         resDisplay.style.display="none";
-//     }
-
-//     })
-
-//     Array.from(resDisplay).forEach(function(element){
-//         var displayTxt=element.getElementById("para").innerHTML;
-//         console.log(displayTxt);
-//     })
-// })
-
-// if(z.includes("s")){
-//     console.log("yes");
-// }
-// else{
-//     console.log("No");
-// }
-// console.log(z)
-
 var srch = document.getElementById("searchTxt");
 srch.addEventListener("input", function () {
 
+    var inputValue = srch.value.toLowerCase();
+    console.log(inputValue);
 
+    var resDisplay = document.getElementsByClassName("displayRes");
+    // console.log(resDisplay)
+
+    Array.from(resDisplay).forEach(function (element) {
+        var z = element.getElementsByTagName("p")[0].innerHTML;
+        console.log(z);
+
+        if (z.toLowerCase().includes(inputValue)) {
+            element.style.display = "grid";
+        }
+        else {
+            element.style.display = "none";
+        }
+    })
 })
+
+
+
